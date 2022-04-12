@@ -16,24 +16,8 @@ song_cluster_pipeline = pickle.load(open("mrs_model", 'rb'))
 
 data = pd.read_csv("data.csv")
 
-
-'''
-SPOTIFY_CLIENT_ID = "d5a1ba2ad8334bb4a5465f8a86d33ef6"
-
-SPOTIFY_CLIENT_SECRET = "131d18e9754148e6b3e6d19e50104c71"
-'''
-
-
-
-
 SPOTIFY_CLIENT_ID = os.environ.get('SPOTIFY_CLIENT_ID')
 SPOTIFY_CLIENT_SECRET = os.environ.get('SPOTIFY_CLIENT_SECRET')
-'''
-
-
-SPOTIFY_CLIENT_ID = os.getenv("SPOTIFY_CLIENT_ID")
-SPOTIFY_CLIENT_SECRET = os.getenv("SPOTIFY_CLIENT_SECRET")
-'''
 
 sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(client_id=SPOTIFY_CLIENT_ID,
                                                            client_secret=SPOTIFY_CLIENT_SECRET))
