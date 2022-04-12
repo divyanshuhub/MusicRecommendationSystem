@@ -49,7 +49,7 @@ def find_song(name, year):    #(name, year)
     audio_features = sp.audio_features(track_id)[0]
 
     song_data['name'] = [name]
-    #song_data['year'] = [year]
+    song_data['year'] = [year]
     song_data['explicit'] = [int(results['explicit'])]
     song_data['duration_ms'] = [results['duration_ms']]
     song_data['popularity'] = [results['popularity']]
