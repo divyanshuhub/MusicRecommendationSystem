@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendation system</title>
+    <style>
+    *{
+			padding: 0;
+			margin: 0;
+
+		}
+
+   .container {
+        color :white;
+        width: 80%;
+			height: 250px;
+			padding: 50px;
+			text-align: center;
+			margin: 10px auto;
+            margin-top: 300px;
+
+        }
+      form{
+	max-width: 350px;
+	margin: 30px 0;
+
+}
+
+form input{
+	width:100%;
+	padding: 12px 10px;
+	margin-bottom: 5px;
+	outline: none;
+box-shadow: none;
+box-sizing: border-box;
+border: 2px solid #0f2027;
+}
+button{
+height:50px;
+color :white;
+text-align:center;
+font-weight:bold;
+background:red;
+border-radius :10px;
+outline:none;
+width :80px;
+
+}
+h3 {
+color :black;
+font-weight:bold;
+
+}
+li{
+color :black;
+font-weight:bold;
+
+}
+body {
+
+<!--            background-image: url("static/img/movielib2.jpg");
+            background-repeat: repeat;
+            background-size: cover;
+            text-align: center;
+            padding: 0px;
+        }
+
+    </style>
+</head>
+<body background={{user_image}} style="width:1040; height:960;">
+<div class="container plan">
+<center>
+    <h1> Song Recommendation System</h1>
+
+<form action="{{ url_for('predict') }} " method ='POST' >
+    <input type="text" name="song" placeholder ="Enter Song Name"  required/>
+    </br></br>
+
+    <button type="Submit">Search</button>
+    <button onclick="'goBack()">Back</button>
+    <script>
+        function goBack() {
+        window.history.back();
+        }
+    </script>
+</form>
+    {% if len == 0 %}
+    <h3>
+        Oops ! the movie requested is not found </br>
+        pls type movies correct & full name !!!
+
+    </h3>
+    {% else %}
+    <ul>
+        {% for keys in data %}
+        <li>{{keys}}</li>
+
+        <style>
+        li {
+            background-color: linen;
+            }
+        li {
+            color: maroon;
+            margin-left: 40px;
+            }
+        </style>
+        {% endfor %}
+    </ul>
+    {% endif %}
+ </center>
+</div>
+</body>
+</html>
