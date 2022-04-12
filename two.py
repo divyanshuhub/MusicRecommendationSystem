@@ -23,14 +23,14 @@ SPOTIFY_CLIENT_SECRET = "97668849339d449582d3d30feb653a65"'''
 '''
 sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(client_id="d5a1ba2ad8334bb4a5465f8a86d33ef6",
                                                            client_secret="97668849339d449582d3d30feb653a65"))
-''''''
+'''
 SPOTIFY_CLIENT_ID = os.environ.get('SPOTIFY_CLIENT_ID')
 SPOTIFY_CLIENT_SECRET = os.environ.get('SPOTIFY_CLIENT_SECRET')
 '''
 
 SPOTIFY_CLIENT_ID = os.getenv("SPOTIFY_CLIENT_ID")
 SPOTIFY_CLIENT_SECRET = os.getenv("SPOTIFY_CLIENT_SECRET")
-
+'''
 
 sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(client_id=SPOTIFY_CLIENT_ID,
                                                            client_secret=SPOTIFY_CLIENT_SECRET))
