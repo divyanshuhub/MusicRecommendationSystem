@@ -10,7 +10,7 @@ import pickle
 
 song_cluster_pipeline = pickle.load(open("mrs_model", 'rb'))
 
-data = pd.read_csv(r"C:\Users\apollo\PycharmProjects\Flask Prajects Prototypes\Music Recommendation System\data.csv")
+data = pd.read_csv("data.csv")
 
 
 '''
