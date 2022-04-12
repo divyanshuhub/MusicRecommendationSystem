@@ -9,3 +9,4 @@ seaborn~=0.11.2
 plotly~=5.3.1
 matplotlib~=3.5.1
 gunicorn~=20.1.0
+python-dotenv~=0.20.0
